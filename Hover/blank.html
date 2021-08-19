@@ -1,0 +1,67 @@
+<html>
+<head>
+    <style>
+        /* .changecolor{
+            background-color: green;
+            color: black;
+        }
+        .changecolor:hover{
+            background-color: red;
+            color:#000000;
+        } */
+
+        .column:hover{
+            background-color: red;
+            float: left;
+            width:10px;
+            height:10px;
+
+        }
+        
+        .column{
+            
+            float: left;
+            height:10px;
+            width:10px;
+            background-color:#fdfdfd;
+        }
+
+        .row:after{
+            
+            
+            display:table;
+            clear: both;
+        }
+
+    </style>
+</head>
+
+    <body >
+<!-- 
+            <div class="row">
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
+            </div> -->
+
+            <div id = "content"></div>
+
+            
+
+    </body>
+    <script>
+        console.log(window.outerHeight)
+        console.log(window.outerWidth)
+
+        var t = ''
+
+        for (var i = 0;i < (window.outerHeight*window.outerWidth)/30;i++)
+        {
+            t = t + "<div class = 'column'></div>" ;
+        }
+
+        document.getElementById('content').innerHTML = t ;
+
+
+    </script>
+</html>
